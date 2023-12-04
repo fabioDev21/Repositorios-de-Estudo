@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <title> Formulário de contato </title>
+</head>
+<body>
+    <section class="brown-background">
+        <div>
+            <h1 class="titulo">Formulário de contato</h1>
+            <p>Preencha todos os campos</p>
+        </div>
+        <span>
+            <p></p>
+        </span>
+            <form method="post" action="index.html">
+                <span class="agrupamento">
+                    <label for="nomeUsuario" class="labels-inputs"> Nome&nbsp;: </label>
+                    <input type="text" name="nomeUsuario" class="caixaDeTexto" placeholder="Nome completo">
+                </span>
+                <span class="agrupamento">
+                    <label for="emailUsuario" class="labels-inputs"> Email&nbsp;: </label>
+                    <input type="email" name="emailUsuario" class="caixaDeTexto" placeholder="E-mail válido">
+                </span>
+                <span class="agrupamento">
+                    <label for="assuntoUsuario" class="labels-inputs">Assunto&nbsp;: </label>
+                    <select class="caixaDeTexto"  name="assuntoUsuario" >
+                        <option value="selecione"> Selecione</option>
+                        <option value="elogios"> Elogios </option>
+                        <option value="sugestoes"> Sugestões</option>
+                        <option value="reclamacoes"> Reclamações </option>
+                    </select>
+                </span>
+                <span class="agrupamento">
+                    <label for="areaMensagem" class="labels-textarea">Mensagem&nbsp;:</label>
+                    <textarea name="areaMensagem" class="areaMensagem" cols="40" rows="7" placeholder="Sua mensagem"></textarea>
+                </span>
+                <input type="submit" class="btnEnviar" value="Enviar">                
+            </form>
+        </div>
+    </section>
+</body>
+</html>

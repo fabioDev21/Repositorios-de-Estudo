@@ -1,0 +1,120 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f3f0d1;
+}
+.brown-background{
+    margin: 0 auto;
+    margin-top: 120px;
+    width: 525px;
+    height: 470px;
+    background-color: #8d4616;
+    background-image: linear-gradient(to bottom, #b66c3b 0%, #945125 60%);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 3px 4px 4px#000;
+
+}
+.titulo{
+    text-align: center;
+    cursor: default;
+    padding-top: 5px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 900;
+    text-shadow: 2px 2px 1px #000;
+}
+div p{
+    cursor: default;
+    text-align: center;
+    color: #fff;
+    font-size: 13px;
+    text-shadow: 2px 1px 1px #000;
+}
+span p{
+    display: block;
+    margin: 0 auto;
+    width: 85%;
+    padding-top: 13px;
+    padding-bottom: 15px;
+    border-top: 3px solid #000;
+}
+.labels-inputs{
+    position: relative;
+    align-self: center;
+    bottom: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    font-weight: bolder;
+    color: #fff;
+    text-shadow: 2px 2px 1px #000;
+}
+.labels-textarea{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    font-weight: bolder;
+    color: #fff;
+    text-shadow: 2px 2px 1px #000;
+}
+.agrupamento{
+    display: flex;
+    position: relative;
+    justify-content: end;
+    right: 50px;
+    bottom: 30px;
+    margin-top: 15px;
+}
+.caixaDeTexto{
+    border-width: 0px;
+    border-radius: 5px;
+    color: #7c7c7c;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 300px;
+    box-shadow: 3px 3px 3px#000;
+    background-color: #f7f6c5;
+    background-image:linear-gradient(to bottom, #d6d6bb 3%, #f7f6c5 50%);
+}
+select{
+    cursor: pointer;
+}
+.areaMensagem{
+    margin-left: 7px;
+    border-width: 0px;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f7f6c5;
+    box-shadow: 3px 3px 3px #000;
+    background-image:linear-gradient(to bottom, #d6d6bb 3%, #f7f6c5 30%);
+
+}
+.areaMensagem:focus , .caixaDeTexto:focus{
+    outline: none;
+    color: #000;
+    background-color: #f5f4d7;
+    background-image:linear-gradient(to bottom, #d6d6bb 0%, #f7f6c5 60%);
+}
+.btnEnviar{
+    position: relative;
+    left: 142px;
+    bottom: 15px;
+    background-color: #000;
+    color: #f5f4d7;
+    font-weight: bolder;
+    font-size: 14px;
+    width: 85px;
+    height: 35px;
+    border-width: 0px;
+    border-radius: 5px;
+}
+.btnEnviar:active{
+    border-style: solid;
+    border-width: 3px;
+    background-color: #f5f4d7;
+    color: #000;
+}
+.btnEnviar:focus{
+    outline-color: #f5f4d7;
+    outline-style: solid;
+    outline-width: 1px;
+}
