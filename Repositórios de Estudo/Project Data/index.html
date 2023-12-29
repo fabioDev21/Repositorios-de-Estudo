@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Data System </title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        window.onload = function data(){
+            const data = new Date()
+            const dd = data.toLocaleDateString().slice(0,2)
+            const mm = data.toLocaleDateString().slice(3,5)
+            const yyyy = data.toLocaleDateString().slice(8,10)
+            let hor = data.getHours()
+            let min = data.getMinutes()
+            let seg = data.getSeconds()
+
+            document.getElementById("data").innerHTML = `${dd}/${mm}/${yyyy}`
+            
+            setInterval((function attHoras(){
+                seg += 1
+                if(seg >= 60){
+                    seg = 0
+                    min += 1
+                    if(min >= 60){
+                        min = 0
+                        hor += 1
+                        if(hor == 23 && min == 60 ){
+                            hor == 0
+                        }
+                    }
+                }
+                document.getElementById('horas').innerHTML = `${hor}:${min}:${seg}`
+
+            }),1000)
+        }
+    </script>
+</head> 
+<body class="centerlize">
+    <header>
+        <div class="barafter">
+            <h1> This a data show! </h1>
+            <p> For nothing, just only a test page </p>
+        </div>
+    </header>
+    <section>
+        <div class="atsameline">
+            <p id="data"></p><br>
+            <p id="horas"></p>
+        </div>
+    </section>
+    <footer class="barbefore">
+        <h4> See? I told you, its a page for nothing to see!  </h5>
+    </footer>
+</body>
+</html>

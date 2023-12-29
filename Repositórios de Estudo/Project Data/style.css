@@ -1,0 +1,63 @@
+.centerlize{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 28px;
+    background-color: #fcf9f5
+}
+.barafter::after{
+    content: " ";
+    display: inline-block;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 2px;
+    animation-name: barlightning ;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+section div p{
+    border: #5656f8 2px solid;
+    padding: 10px;
+
+    color: #5656f8
+}
+section div p:hover{
+    transition-duration: 0.1s;
+    transform: scale(1.1);
+    border: #1a1a42 2px solid;
+    padding: 10px;
+    color: #1a1a42
+}
+.atsameline{
+    animation-name: borderlightning;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    display: flex;
+    justify-content: space-evenly;
+    margin-inline: 100px;
+}
+/*.atsameline:hover{
+    transition-duration: 5s;
+}*/
+.barbefore::before{
+    content: " ";
+    display: inline-block;
+    margin-top: 26px;
+    width: 200px;
+    height: 2px;
+    animation-name: barlightning;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+@keyframes barlightning {
+    0%{background-color: #fd4a4a;}
+    50%{background-color: #5df75d;}
+    100%{background-color: #5656f8;}
+}
+@keyframes borderlightning{
+    0%{border: #fd4a4a 2px solid;}
+    50%{border: #5df75d 2px solid;}
+    100%{border: #5656f8 2px solid;}
+}
