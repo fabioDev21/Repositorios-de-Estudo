@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 50">
-    <g transform="rotate(-90 25 25)">
-        <circle cx="25" cy="25" r="20" stroke="black" stroke-width="2" fill="black" />
-        <path d="M 20 25 H 30 L 25 30 Z" fill="white"/>
-    </g>
-</svg>
