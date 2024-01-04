@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logos/logo.svg" type="image/x-svg">
+    <title> Juntos somos mais! </title>
+</head>
+<body>
+    <div id="menuNav">
+        <figure id="logoJSM">
+            <img src="logos/logo.svg" alt="Logo Juntos Somos Mais" title="Logo">
+        </figure>    
+        <span>
+            <input type="search" name="cxSrch" id="cxSrch">
+            <input type="submit" value="Pesquisar">
+            <figure id="mode">
+                <img src="logos/sun.svg" alt="sun-mode"> <!-- Adicionar script dark mode -->
+            </figure>
+        </span>
+    </div>
+    <div id="asideFilter">
+        <p> Home > Usuários > Detalhes </p> <!-- Gerar um parágrafo a partir de JS com o caminho relativo do usuário -->
+        <p>Lista de Membros</p>
+        <span>
+            <p>Por estado</p>
+            <span id="checkboxEstados">
+                <input type="checkbox" name="ckBoxSp" id="ckBoxSp">
+                <label for="ckBoxSp"> São Paulo</label>
+                <input type="checkbox" name="ckBoxRj" id="ckBoxRj">
+                <label for=""> Rio de Janeiro</label>
+                <input type="checkbox" name="ckBoxMg" id="ckBoxMg">
+                <label for=""> Minas Gerais</label>
+                <input type="checkbox" name="ckBoxEs" id="ckBoxEs">
+                <label for=""> Espírito Santo</label>
+                <input type="checkbox" name="ckBoxBh" id="ckBoxBh">
+                <label for=""> Bahia</label>
+            </span>
+            <a href="index.html">Ver Todos</a>
+        </span>
+    </div>
+    <div>
+        <p>Exibindo 9 de 25 itens</p>
+        <select name="ordSelect" id="ordSelect">
+            <option value="nome">Nome</option>
+            <option value="nome">Crescente > Decrescente</option>
+            <option value="nome">Decrescente < Crescente</option>
+        </select>
+        <span id="usersTable"></span> <!-- indexar os usuários a partir das informações dentro de uma div-->
+        <span id="navUsers">
+            <img src="logos/arrow-right.svg" alt="voltar">
+            <p>1  2  3</p>
+            <img src="logos/arrow-left.svg" alt="avançar">
+        </span>
+    </div>
+    <div id="footer">
+      <figure class="logos">
+        <img src="logos/logo.svg" alt="Juntos Somos Mais">
+        <figcaption>Juntos Somos Mais Fidelização S.A.</figcaption>
+      </figure>
+      <p>Siga-nos nas redes sociais:</p>
+      <figure class="logos">
+          <img src="logos/facebook-logo.svg" alt="facebook-logo">
+          <img src="logos/linkedin-logo.svg" alt="linkedin-logo">
+          <img src="logos/instagram-logo.svg" alt="instagram-logo">
+      </figure>
+    </div>
+</body>
+</html>
