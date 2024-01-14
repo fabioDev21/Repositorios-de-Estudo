@@ -19,27 +19,88 @@
     justify-content: space-around;
     height: 5em;
     margin-bottom: 3em;
-    padding: 2em;
+    padding: 2em 2em 2em 15em;
     background-color: var(--background-color);
 }
 .nav__button{
     width: 40px;
+    cursor: pointer;
 }
 .nav__logo{
     width: 40px;
+    cursor: pointer;
+}
+.nav__form{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    width: 15.5em;
+    padding-inline-start: 0.5em;
+    height: 2.7em;
+    border-radius: 10px;
+}
+.nav__form__srcLogo{
+   margin: 0.3em;
+   width: 20px;
+   cursor: pointer;
 }
 .nav__srcBar{
-    padding: 0.5em;
-    height: 2em;
+    padding: 0.3em;
+    height: 3em;
     width: 15em;
-    border-radius: 10px;
-    border: transparent;
+    border: none;
+    outline: none;
 }
 /* PRINCIPAL */
 .main{
     grid-area: main;
+    display: grid;
+    grid-template-columns: 380px 380px 380px;
+    grid-template-rows: 550px;
+    justify-content: center;
+    gap: 2em;
+    grid-template-areas: 
+    "main__news__column-1 main__news__principal main__news__column-2"
 }
-
+.main__news__column-1, .main__news__column-2{
+    display: grid;
+    gap: 1em;
+}
+.main__news__column-1{
+    grid-area: main__news__column-1;
+}
+.main__news__principal{
+    grid-area: main__news__principal;
+}
+.main__news__principal, .main__news{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    padding: 10px;
+    height: 550px;
+    background: linear-gradient(25deg, #cddce99b 0%, #f7fbffbb 100%);
+    border: 2px solid var(--border-color);
+    text-align: center;
+    transition: 0.6s;
+    border-radius: 15px;
+}
+.main__news__principal:hover, .main__news:hover{
+    transform: scale(1.1,1.1);
+}
+.M_N_principal--desc{
+    color: var(--text-color);
+    bottom: 0px;
+}
+.main__news{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px;
+}
+.main__news__others{
+    visibility: hidden;
+}
 /* RODAPÉ */
 .footer{
     grid-area: footer;
