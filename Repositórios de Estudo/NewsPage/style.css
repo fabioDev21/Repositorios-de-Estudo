@@ -1,0 +1,46 @@
+:root {
+    --text-color: #17212a;
+    --background-color: #425769;
+    --border-color: #cddce9;
+}
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    "nav nav nav"
+    "main main main"
+    "footer footer footer";
+}
+/* TOPO */
+.nav{
+    grid-area: nav;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 5em;
+    margin-bottom: 3em;
+    padding: 2em;
+    background-color: var(--background-color);
+}
+.nav__button{
+    width: 40px;
+}
+.nav__logo{
+    width: 40px;
+}
+.nav__srcBar{
+    padding: 0.5em;
+    height: 2em;
+    width: 15em;
+    border-radius: 10px;
+    border: transparent;
+}
+/* PRINCIPAL */
+.main{
+    grid-area: main;
+}
+
+/* RODAPÉ */
+.footer{
+    grid-area: footer;
+}
