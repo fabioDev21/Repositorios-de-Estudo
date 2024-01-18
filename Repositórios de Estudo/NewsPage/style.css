@@ -16,11 +16,19 @@
     grid-area: nav;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     height: 5em;
     margin-bottom: 3em;
-    padding: 2em 2em 2em 15em;
+    padding: 2em;
     background-color: var(--background-color);
+}
+.nav__items{
+    display: flex;
+    justify-content: space-around;
+
+    margin: 0 auto;
+
+    width: 50vw;
 }
 .nav__button{
     width: 40px;
@@ -45,6 +53,7 @@
    cursor: pointer;
 }
 .nav__srcBar{
+    color: var(--text-color);
     padding: 0.3em;
     height: 3em;
     width: 15em;
@@ -55,7 +64,7 @@
 .main{
     grid-area: main;
     display: grid;
-    grid-template-columns: 380px 380px 380px;
+    grid-template-columns:  380px 380px 380px;
     grid-template-rows: 550px;
     justify-content: center;
     gap: 2em;
