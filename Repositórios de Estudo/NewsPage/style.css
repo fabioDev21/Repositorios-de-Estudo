@@ -136,8 +136,6 @@
     background-color: var(--background-color)
 }
 /* TO DO: título em linha só pra ele, adicionar cores brancas para as fontes*/
-#other__news--title{
-}
 
 /*TO DO: definir width e detalhes do item como: background-color, border, font, display flex com justify content space-?*/
 .other__news--item{
