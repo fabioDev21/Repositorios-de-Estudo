@@ -118,8 +118,11 @@
 
 .section{
     width: 70vw;
+    height: 30vh;
     margin: auto;
     display: grid;
+    justify-content: space-around;
+    align-items: baseline;
     grid-template-areas: 
     "other__news--container other__news--container news__categories";
 }
@@ -132,14 +135,28 @@
     margin: auto;
     background-color: var(--background-color)
 }
-.news__categories{
-    grid-area: news__categories;
-    width: 15vw;
-    display: flex;
-    background-color: var(--background-color);
+/* TO DO: título em linha só pra ele, adicionar cores brancas para as fontes*/
+#other__news--title{
 }
 
+/*TO DO: definir width e detalhes do item como: background-color, border, font, display flex com justify content space-?*/
+.other__news--item{
+    height: 100px;
+}
+
+/* TO DO: definir que logo e titulo da categoria fiquem na mesma linha e detalhar com cor da fonte, tamanho da fonte, width do elemento e mais a classe selected e hover dele */
+.news__categories{
+    grid-area: news__categories;
+    width: 20vw;
+    flex-direction: column;
+    background-color: var(--background-color);
+}
+#news__categories--title{
+    color: #fff;
+    font-size: 22px;
+}
 /* RODAPÉ */
+/* TO DO: definir detalhamento, background-color, caracteres especiais e um target text? Vale pesquisar a última opção*/
 .footer{
     grid-area: footer;
     margin-top: 5em;
