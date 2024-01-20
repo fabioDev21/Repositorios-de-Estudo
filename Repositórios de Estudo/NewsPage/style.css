@@ -117,20 +117,26 @@
 /* OUTRAS NOTÍCIAS*/
 
 .section{
+    width: 70vw;
+    margin: auto;
     display: grid;
     grid-template-areas: 
     "other__news--container other__news--container news__categories";
 }
 .other__news--container{
-    width: 60vw;
-    margin: auto;
     grid-area: other__news--container;
     display: grid;
-    gap: 1em;
     grid-template-columns: repeat(auto-fit, 380px);
+    gap: 1em;
+    width: 45vw;
+    margin: auto;
+    background-color: var(--background-color)
 }
 .news__categories{
     grid-area: news__categories;
+    width: 15vw;
+    display: flex;
+    background-color: var(--background-color);
 }
 
 /* RODAPÉ */
