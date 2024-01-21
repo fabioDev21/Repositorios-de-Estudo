@@ -1,7 +1,9 @@
 :root {
     --text-color: #17212a;
+    --text-container-color: #e4eff1;
     --background-color: #425769;
-    --border-color: #cddce9;
+    --background-gradient: linear-gradient(25deg, #82BBC4 0%, #D6E7EA 100%);
+    --border-color: #4D7880;
 }
 
 .container{
@@ -86,7 +88,7 @@
     margin: auto;
     padding: 10px;
     height: 550px;
-    background: linear-gradient(25deg, #cddce99b 0%, #f7fbffbb 100%);
+    background: var(--background-gradient);
     border: 2px solid var(--border-color);
     text-align: center;
     transition: 0.6s;
@@ -116,47 +118,84 @@
 }
 /* OUTRAS NOTÍCIAS*/
 
-.section{
-    width: 70vw;
-    height: 30vh;
-    margin: auto;
-    display: grid;
-    justify-content: space-around;
-    align-items: baseline;
-    grid-template-areas: 
-    "other__news--container other__news--container news__categories";
+/* TO DO: título em linha só pra ele, adicionar cores brancas para as fontes*/
+#other__news--title{
+    color: var(--text-color);
+    width: max-content;
+    margin: 1em auto;
+    font-size: 30px;
 }
 .other__news--container{
     grid-area: other__news--container;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 380px);
-    gap: 1em;
-    width: 45vw;
+    grid-template-areas: 
+    "categories__news--sports categories__news--tech categories__news--games";
+    padding: 1em;
+    width: 90vw;
+    height: 65vh;
     margin: auto;
-    background-color: var(--background-color)
+    background-color: var(--background-color);
+    border-radius: 15px;
 }
-/* TO DO: título em linha só pra ele, adicionar cores brancas para as fontes*/
+.categories__news--sports, .categories__news--tech, .categories__news--games{
+    margin: 0.5em auto;
+    width: 27vw;
+    display: grid;
+    gap: 1em;
+    overflow: scroll;
+    -ms-overflow-style: none;
+}
+.categories__news--sports::-webkit-scrollbar, .categories__news--tech::-webkit-scrollbar, .categories__news--games::-webkit-scrollbar{
+    display: none;
+}
+.categories__pic{
+    text-align: center;
+    width: 27vw;
+}
+.categories--title{
+    width: 27vw;
+    margin-bottom: 1em;
+    color: var(--text-container-color);
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+}
+.categories__news--item{
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 24px;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    width: 27vw;
+    height: 37vh;
+    justify-content: space-between;
+    background: var(--background-gradient);
+    border: var(--text-color) solid 2px;
+    border-radius: 15px;
+}
+.news__img{
+    align-self: center;
+}
 
-/*TO DO: definir width e detalhes do item como: background-color, border, font, display flex com justify content space-?*/
-.other__news--item{
-    height: 100px;
-}
 
 /* TO DO: definir que logo e titulo da categoria fiquem na mesma linha e detalhar com cor da fonte, tamanho da fonte, width do elemento e mais a classe selected e hover dele */
-.news__categories{
-    grid-area: news__categories;
-    width: 20vw;
-    flex-direction: column;
-    background-color: var(--background-color);
-}
-#news__categories--title{
-    color: #fff;
-    font-size: 22px;
-}
+
 /* RODAPÉ */
 /* TO DO: definir detalhamento, background-color, caracteres especiais e um target text? Vale pesquisar a última opção*/
 .footer{
+    background-color: var(--background-color);
+    color: var(--text-container-color);
+    padding: 3em;
     grid-area: footer;
     margin-top: 5em;
     text-align: center;
+}
+.footer__title{
+    font-size: 30px;
+    font-weight: 600;
+}
+.footer_desc{
+    font-size: 24px;
+    margin-bottom: 2.5em;
 }
