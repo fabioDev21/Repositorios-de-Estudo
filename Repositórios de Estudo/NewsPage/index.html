@@ -18,7 +18,7 @@
                     <img loading="lazy" src="images/logos/list.svg" alt="menu-list.svg" class="nav__button">
                 </picture>
                 <picture>
-                    <img loading="lazy" src="images/logos/globe.svg" alt="globe.svg"  class="nav__logo">
+                    <img loading="lazy" src="images/logos/logo.svg" alt="logo.svg"  class="nav__logo">
                 </picture>
                 <form action="index.html" class="nav__form">
                     <img src="images/logos/search.svg" alt="search.svg" class="nav__form__srcLogo">
@@ -28,42 +28,43 @@
         </nav>
     </header>
     <main class="main">
+        <h1 class="news__title">Principais notícias do momento</h1>
         <span class="main__news__column-1">
-            <div class="main__news">
-                <picture>
-                    <img src="images/news/" alt="img.png" class="main__news__img">
+            <div class="main__news aside">
+                <picture class="main__news__img">
+                    <img src="images/news/" alt="img.png">
                 </picture>
-                <p> 2. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <p class="news__desc"> 2. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
             </div>
-            <div class="main__news">
-                <picture>
-                    <img src="images/news/" alt="img.png"class="main__news__img">
+            <div class="main__news aside">
+                <picture class="main__news__img">
+                    <img src="images/news/" alt="img.png">
                 </picture>
-                <p> 4. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <p class="news__desc"> 4. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
             </div>
         </span>
-        <div class="main__news__principal">
-            <picture>
-                <img src="images/news/" alt="img.png"class="main__news__img">
+        <div class="main__news principal">
+            <picture class="main__news__img">
+                <img src="images/news/" alt="img.png">
             </picture>
-            <p class="M_N_principal--desc"> 1. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <p class="news__desc"> 1. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
         </div>
         <span class="main__news__column-2">
-            <div class="main__news">
-                <picture>
-                    <img src="images/news/" alt="img.png"class="main__news__img">
+            <div class="main__news aside">
+                <picture class="main__news__img">
+                    <img src="images/news/" alt="img.png">
                 </picture>
-                <p> 3. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <p class="news__desc"> 3. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
             </div>
-            <div class="main__news">
-                <picture>
-                    <img src="images/news/" alt="img.png"class="main__news__img">
+            <div class="main__news aside">
+                <picture class="main__news__img">
+                    <img src="images/news/" alt="img.png">
                 </picture>
-                <p> 5. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <p class="news__desc"> 5. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
             </div>
         </span>
     </main>
-    <div class="border"> </div>
+    <div class="hr"> </div>
     <!-- adicionar um icone "mais" para mostrar uma SINGLE PAGE só de notícias com scroll separados por categorias -->
     <!-- integrar cattegorias com outras notícias e criar mecanismo select de notícias para ler em outras guias-->
     <!-- sistema roleta em media queries-->
@@ -106,9 +107,9 @@
                     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit!</p>
                 </span>
             </div>
-            <div class="categories__news--tech">
+            <div class="categories__news--tech selected">
                 <picture class="categories__pic">
-                    <img src="images/categories/sports.svg" alt="tech.svg" title="Tech" class="categories__logo">
+                    <img src="images/categories/tech.svg" alt="tech.svg" title="Tech" class="categories__logo">
                     <p class="categories--title"> Tecnologia</p>
                 </picture>
                 <span class="categories__news--item">
@@ -144,7 +145,7 @@
             </div>
             <div class="categories__news--games">
                 <picture class="categories__pic">
-                    <img src="images/categories/sports.svg" alt="games.svg" title="games" class="categories__logo">
+                    <img src="images/categories/games.svg" alt="games.svg" title="games" class="categories__logo">
                     <p class="categories--title"> Jogos </p>
                 </picture>
                 <span class="categories__news--item">
@@ -181,9 +182,10 @@
         </div>
     </section>
     <footer class="footer">
-        <h4 class="footer__title"> Somos a Underline_News!</h4>
-        <p class="footer__desc"> E estamos comprometidos com a verdadeira notícia!</p>
-        <p class="footer__copyrights"> Todos os direitos reservados a Underline News.</p>
+        <h4 class="footer__title"> Somos a Underline_News</h4>
+        <span class="footer__copyrights">
+            <p> Todos os direitos reservados a Underline News.</p>
+        </span>
     </footer>
 </body>
 </html>

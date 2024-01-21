@@ -5,7 +5,6 @@
     --background-gradient: linear-gradient(25deg, #82BBC4 0%, #D6E7EA 100%);
     --border-color: #4D7880;
 }
-
 .container{
     display: grid;
     grid-template-areas: 
@@ -18,7 +17,6 @@
     grid-area: nav;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
     height: 5em;
     margin-bottom: 3em;
     padding: 2em;
@@ -27,21 +25,17 @@
 .nav__items{
     display: grid;
     grid-template-columns: repeat(auto-fit, 50px);
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 100vw;
 }
-.nav__button{
-    width: 40px;
-    cursor: pointer;
-}
-.nav__logo{
+.nav__button, .nav__logo{
     width: 40px;
     cursor: pointer;
 }
 .nav__form{
     display: flex;
     align-items: center;
-    background-color: #fff;
+    background-color: #e4eff1;
     width: 15.5em;
     padding-inline-start: 0.5em;
     height: 2.7em;
@@ -53,6 +47,7 @@
    cursor: pointer;
 }
 .nav__srcBar{
+    background-color: #e4eff1;
     color: var(--text-color);
     padding: 0.3em;
     height: 3em;
@@ -64,12 +59,19 @@
 .main{
     grid-area: main;
     display: grid;
-    grid-template-columns:  380px 380px 380px;
-    grid-template-rows: 550px;
     justify-content: center;
-    gap: 2em;
-    grid-template-areas: 
+    gap: 2.5em;
+    grid-template-columns:  repeat(auto-fit, 380px);
+    width: 90vw;
+    margin: auto;
+    grid-template-areas:
+    "news__title news__title news__title" 
     "main__news__column-1 main__news__principal main__news__column-2";
+}
+.news__title{
+    grid-area: news__title;
+    height: 0.5em;
+    margin: 0.5em auto;
 }
 .main__news__column-1, .main__news__column-2{
     display: grid;
@@ -81,49 +83,48 @@
 .main__news__principal{
     grid-area: main__news__principal;
 }
-.main__news__principal, .main__news{
+.main__news{
+    margin: auto;
+    padding: 1em;
+    border-radius: 15px;
+    transition: 0.6s;
+}
+.principal{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: auto;
-    padding: 10px;
     height: 550px;
     background: var(--background-gradient);
-    border: 2px solid var(--border-color);
-    text-align: center;
-    transition: 0.6s;
-    border-radius: 15px;
+    border: 0.3em solid var(--border-color);
 }
-.main__news__principal:hover, .main__news:hover{
-    transform: scale(1.1,1.1);
-}
-.M_N_principal--desc{
-    color: var(--text-color);
-    bottom: 0px;
-}
-.main__news{
+.aside{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 250px;
+    color: var(--text-container-color);
+    background-color: var(--background-color);
+    border: 0.3em solid var(--text-color);
 }
-.border{
+.main__news__img{
+    width: 100%;
+    text-align: center;
+}
+.main__news:hover{
+    transform: scale(1.1,1.1);
+}
+.hr{
     margin: 2.5em auto;
     width: 80vw;
     border: var(--background-color) 5px solid;
     border-radius: 50px;
 }
-.main__news__others{
-    visibility: hidden;
-}
 /* OUTRAS NOTÍCIAS*/
-
-/* TO DO: título em linha só pra ele, adicionar cores brancas para as fontes*/
 #other__news--title{
     color: var(--text-color);
     width: max-content;
     margin: 1em auto;
-    font-size: 30px;
+    font-size: 40px;
 }
 .other__news--container{
     grid-area: other__news--container;
@@ -152,6 +153,9 @@
     text-align: center;
     width: 27vw;
 }
+.categories__logo{
+    width: 26%;
+}
 .categories--title{
     width: 27vw;
     margin-bottom: 1em;
@@ -177,19 +181,14 @@
 .news__img{
     align-self: center;
 }
-
-
-/* TO DO: definir que logo e titulo da categoria fiquem na mesma linha e detalhar com cor da fonte, tamanho da fonte, width do elemento e mais a classe selected e hover dele */
-
 /* RODAPÉ */
-/* TO DO: definir detalhamento, background-color, caracteres especiais e um target text? Vale pesquisar a última opção*/
 .footer{
+    grid-area: footer;
+    text-align: center;
+    margin-top: 5em;
+    padding: 3em;
     background-color: var(--background-color);
     color: var(--text-container-color);
-    padding: 3em;
-    grid-area: footer;
-    margin-top: 5em;
-    text-align: center;
 }
 .footer__title{
     font-size: 30px;
@@ -197,5 +196,4 @@
 }
 .footer_desc{
     font-size: 24px;
-    margin-bottom: 2.5em;
 }
